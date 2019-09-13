@@ -1,0 +1,5 @@
+package com.pixogram.user.repo;
+
+public interface UserRepo {
+
+}

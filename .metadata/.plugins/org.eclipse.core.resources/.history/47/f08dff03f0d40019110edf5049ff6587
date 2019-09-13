@@ -1,0 +1,11 @@
+package com.pixogram.follow.entity;
+
+import javax.persistence.Column;
+
+public class NewFollow {
+	private int followid;
+
+	private int followerid;
+
+	private String status;
+}

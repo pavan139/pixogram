@@ -1,0 +1,17 @@
+package com.pixogram.media.entity;
+
+import javax.persistence.Column;
+
+public class NewMedia {
+	
+	
+	private String title;
+
+	private String description;
+
+	private String tags;
+
+	private String type;
+
+	private int userid;
+}

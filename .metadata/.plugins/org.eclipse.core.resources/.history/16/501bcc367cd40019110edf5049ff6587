@@ -1,0 +1,32 @@
+package com.pixogram.user.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pixogram.user.entity.User;
+import com.pixogram.user.entity.UserLogin;
+import com.pixogram.user.repo.UserRepo;
+
+@CrossOrigin(origins = "http://localhost:4200")
+@RestController
+@RequestMapping("/user")
+public class UserController {
+	@Autowired
+	private UserRepo repo;
+	 @PostMapping(path = "/login")
+	    public User loginaa(@RequestBody UserLogin userlogin){
+	       User ur = repo.findByUsernameAndPassword(userlogin.getUsername(), userlogin.getPassword());
+		return ur;
+	        
+	    }
+	
+	
+	
+	
+}

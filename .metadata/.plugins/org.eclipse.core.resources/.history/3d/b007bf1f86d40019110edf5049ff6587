@@ -1,0 +1,57 @@
+package com.pixogram.follow.entity;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "follow")
+public class Follow {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int followId;
+	@Column
+	private int followerId;
+	@Column
+	private String status;
+
+	public int getFollowId() {
+		return followId;
+	}
+	public void setFollowId(int followId) {
+		this.followId = followId;
+	}
+	public int getFollowerId() {
+		return followerId;
+	}
+	public void setFollowerId(int followerId) {
+		this.followerId = followerId;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	public Follow() {
+		super();
+	}
+
+	public Follow(int followId, int followerId, String status) {
+		super();
+		this.followId = followId;
+		this.followerId = followerId;
+		this.status = status;
+	
+	}
+	
+	
+	
+}

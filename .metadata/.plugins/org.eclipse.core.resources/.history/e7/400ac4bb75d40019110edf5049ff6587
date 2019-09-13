@@ -1,0 +1,5 @@
+package com.pixogram.media.entity;
+
+public class Media {
+
+}

@@ -1,0 +1,5 @@
+package com.pixogram.user.entity;
+
+public class NewUser {
+
+}

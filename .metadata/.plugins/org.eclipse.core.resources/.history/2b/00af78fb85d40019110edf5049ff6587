@@ -1,0 +1,10 @@
+package com.pixogram.follow.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.pixogram.follow.entity.Follow;
+@Repository
+public interface FollowRepo extends JpaRepository<Follow, Integer>{
+	int deleteByFollowerIdAndFollowId(int follower,int follow);
+}

@@ -1,0 +1,75 @@
+package com.pixogram.media.entity;
+
+
+@Entity
+@Table
+public class Media {
+
+@Column(unique = true)	
+private String fname;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private int mediaid;
+@Column
+private String title;
+@Column
+private String description;
+@Column
+private String tags;
+@Column
+private char type;
+@Column
+private String user;
+
+public char getType() {
+	return type;
+}
+public void setType(char type) {
+	this.type = type;
+}
+public String getFname() {
+	return fname;
+}
+public void setFname(String fname) {
+	this.fname = fname;
+}
+public String getTitle() {
+	return title;
+}
+public void setTitle(String title) {
+	this.title = title;
+}
+public String getDescription() {
+	return description;
+}
+public void setDescription(String description) {
+	this.description = description;
+}
+public String getTags() {
+	return tags;
+}
+public void setTags(String tags) {
+	this.tags = tags;
+}
+
+public String getUser() {
+	return user;
+}
+public void setUser(String user) {
+	this.user = user;
+}
+public Media(String user,String fname, String title, String description, String tags,char type) {
+	super();
+	this.user=user;
+	this.fname = fname;
+	this.title = title;
+	this.description = description;
+	this.tags = tags;
+    this.type = type;
+}
+public Media() {
+	super();
+}
+
+	
+}

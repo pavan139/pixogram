@@ -1,0 +1,12 @@
+package com.pixogram.user.repo;
+
+public class Snippet {
+	 @PostMapping(path = "/login")
+		    public UsrEntity loginaa(@RequestBody UserLoginModal userlogin)
+		                                                    throws RecordNotFoundException {
+		       UsrEntity ur = service.loginauth(userlogin.getId(),userlogin.getPassword());
+			return ur;
+		        
+		    }
+}
+

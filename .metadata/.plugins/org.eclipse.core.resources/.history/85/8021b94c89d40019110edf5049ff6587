@@ -1,0 +1,42 @@
+package com.pixogram.media.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pixogram.media.entity.Media;
+import com.pixogram.media.repo.MediaRepo;
+
+
+
+@CrossOrigin(origins = "http://localhost:4200")
+@RestController
+@RequestMapping("/media")
+public class MediaController {
+	MediaRepo repo;
+	
+	  @PostMapping("/upload") 
+	  public Media createUser(@RequestBody Media media)
+	  { 
+			   if(repo.save(media) != null)
+			   {
+				   return media;
+			   }   
+		return null;
+		  
+	  } 
+
+	  @GetMapping("/mymedia/{id}") 
+	  public List<Media> myMedia(@PathVariable int id )
+	  { 
+			   List<Media> m = repo.findByUserid(id);
+			   return m;
+		  
+	  } 
+}

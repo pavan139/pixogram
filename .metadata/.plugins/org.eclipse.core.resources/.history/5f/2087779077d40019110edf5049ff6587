@@ -1,0 +1,5 @@
+package com.pixogram.follow.repo;
+
+public class FollowRepo {
+
+}

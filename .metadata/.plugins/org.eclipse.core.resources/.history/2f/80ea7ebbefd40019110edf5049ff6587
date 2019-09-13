@@ -1,0 +1,15 @@
+package com.pixogram.user.entity;
+
+import javax.persistence.Column;
+
+public class NewUser {
+
+
+	private String email;
+
+	private String password;
+
+	private String username;
+
+	private String profilepicture;
+}

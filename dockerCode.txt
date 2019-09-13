@@ -1,0 +1,8 @@
+dockerx build -f Dockerfile -t article .
+dockerx run -p 8080:6123 article
+ dockerx images
+ 
+ FROM java:8
+EXPOSE 8080
+ADD article.jar article.jar
+ENTRYPOINT ["java", "-jar", "article.jar"]

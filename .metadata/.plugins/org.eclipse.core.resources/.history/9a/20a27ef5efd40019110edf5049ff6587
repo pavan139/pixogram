@@ -1,0 +1,5 @@
+package com.pixogram.follow.entity;
+
+public class NewFollow {
+
+}
